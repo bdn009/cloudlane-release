@@ -6,3 +6,5 @@
 @media(max-width:650px){.art-orbit{width:75%;height:75%}.orbit-two{width:86%;height:86%;max-width:100%}}
 @media(max-width:360px){.nav-download{display:none}.menu-toggle{margin-left:auto}.feature-copy{grid-template-columns:minmax(0,1fr)}.copy-graphic{gap:12px}.copy-file,.copy-cloud{width:80px;min-width:0}.orbit-two{width:75%;height:75%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+
+.footer>div{flex-wrap:wrap}.footer-policy-link{font-size:10px;color:#737b88;padding:5px 0}.footer-policy-link:hover{color:var(--violet)}

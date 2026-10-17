@@ -105,12 +105,12 @@ async function downloadInstaller() {
     if (hash !== release.sha256) throw new Error('The installer didn’t pass its integrity check. Please try again.');
     if (signal.aborted) throw new DOMException('Cancelled', 'AbortError');
     const url = URL.createObjectURL(new Blob([data], { type: 'application/octet-stream' }));
-    const anchor = document.createElement('a'); anchor.href = url; anchor.download = 'Cloudlane-1.7.0-Setup.msi';
+    const anchor = document.createElement('a'); anchor.href = url; anchor.download = 'Cloudlane-1.7.1-Setup.msi';
     document.body.append(anchor); anchor.click(); anchor.remove();
     setTimeout(() => URL.revokeObjectURL(url), 120000);
     downloadProgress.value = 100; downloadState.textContent = 'Installer verified · Ready';
     downloadTitle.textContent = 'Make yourself at home.';
-    downloadDescription.textContent = 'Your browser has received Cloudlane-1.7.0-Setup.msi. Open it from Downloads, finish setup, then sign in with Google.';
+    downloadDescription.textContent = 'Your browser has received Cloudlane-1.7.1-Setup.msi. Open it from Downloads, finish setup, then sign in with Google.';
     downloadDialog.classList.add('download-success'); downloadAction.textContent = 'Got it';
   } catch (error) {
     if (error.name !== 'AbortError') {
