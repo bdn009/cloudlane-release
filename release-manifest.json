@@ -1,9 +1,9 @@
 {
-  "app_version": "1.7.2",
+  "app_version": "1.7.3",
   "channel": "production",
   "google_credentials": "user-provided",
-  "installer_sha256": "c7a6a1cc396fe3fbdc576bb8d05093c3e9db25e8cf02d6f05570cd032113f2c5",
-  "source_sha256": "138608f132042f2ad907a2822db770953d3d6ccda05d49ce0543916063ccf417",
+  "installer_sha256": "602038a0660de44a1c3d8f3e0f71512121c6ad83f4a0bedef164148b3eb8b7a8",
+  "source_sha256": "93ca679e512ca07464cbe84e727e99df6f9904b3ce438fdb2a726579e16cc0d4",
   "files": {
     ".gitkeep": {
       "bytes": 1,
@@ -21,37 +21,37 @@
       "bytes": 244,
       "sha256": "a9bece787c2366ac59926fda7ac59a861199c29d6889ce17cd39b6b4d697279b"
     },
-    "downloads/cloudlane-1.7.2.01.part": {
+    "downloads/cloudlane-1.7.3.01.part": {
       "bytes": 20971520,
-      "sha256": "37926aef7ed278cde4046cce483febd3acd382f8cbce534dc073b8c850af4e5a"
+      "sha256": "65daec069eab2ab067f0ae7571dc589b6e1240df797a777e8a86b8916367111b"
     },
-    "downloads/cloudlane-1.7.2.02.part": {
+    "downloads/cloudlane-1.7.3.02.part": {
       "bytes": 20971520,
-      "sha256": "44fcb9c56bfd72971bc15112f75a9d6eba0c078e5098d0cff56a0a906bada763"
+      "sha256": "aa2df2a3c1ea912788b5eb6ffb8536c6375597942268be95c74f240ff20030d6"
     },
-    "downloads/cloudlane-1.7.2.03.part": {
+    "downloads/cloudlane-1.7.3.03.part": {
       "bytes": 20971520,
-      "sha256": "bc49ca097068a2f33b9b827a6b4b36c385bebef31d61cd716b2b70897d28e63b"
+      "sha256": "97517ff0641a8873e4d09c1350d50f858e8e0a3942697fbb9fe284fb8987ddb0"
     },
-    "downloads/cloudlane-1.7.2.04.part": {
+    "downloads/cloudlane-1.7.3.04.part": {
       "bytes": 10539008,
-      "sha256": "b6037e66d32bee3e1a5ca7939cb60e1e2fa24c51d1573ebb9a8eb63f2d579a23"
+      "sha256": "77dcbe97166e8fb14db8f25300f1ce4f92d83e5d10926794e5983af20237c614"
     },
     "downloads/release.json": {
       "bytes": 522,
-      "sha256": "f713c62b36c6475d56329032197e55798b94943ab69f8fbde9e13a7da29a42e5"
+      "sha256": "93f093c3a0e7f9eef55c471ab1dbf91551177e9e64a1be075cbbc6f719d15349"
     },
     "downloads/source-info.json": {
       "bytes": 174,
-      "sha256": "93e44fa71d717ce353b71f54cdda61dc1d33b46d256cd59a3fd023b9deeda78f"
+      "sha256": "a9950d0d6538f91db32752bcf89fbb85f3fb9c72f19b6cbbc66708588d1a7833"
     },
     "downloads/source.zip": {
-      "bytes": 950679,
-      "sha256": "138608f132042f2ad907a2822db770953d3d6ccda05d49ce0543916063ccf417"
+      "bytes": 950624,
+      "sha256": "93ca679e512ca07464cbe84e727e99df6f9904b3ce438fdb2a726579e16cc0d4"
     },
     "index.html": {
-      "bytes": 18537,
-      "sha256": "352596c4557d65922eb3ad174d6872a5f188e5395da208b03511c65ada1b37dd"
+      "bytes": 18603,
+      "sha256": "27dfff41c5b9a6e0a96dead2163d950589ec6d3a90154aacfabd586e2e5a4f1e"
     },
     "legal.css": {
       "bytes": 3126,
