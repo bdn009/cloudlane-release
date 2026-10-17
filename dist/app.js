@@ -51,11 +51,28 @@ let downloadController = null;
 let downloadBusy = false;
 let retryDownload = false;
 let releasePromise;
+function validateRelease(release) {
+  const invalid = () => new Error('The installer manifest is invalid. Please try again later.');
+  if (!release || typeof release !== 'object' || !/^\d+\.\d+\.\d+$/.test(release.version) ||
+      release.filename !== `Cloudlane-${release.version}-Setup.msi` ||
+      !/^[a-f0-9]{64}$/.test(release.sha256) || !Number.isSafeInteger(release.bytes) ||
+      release.bytes <= 0 || release.bytes > 150 * 1024 * 1024 ||
+      !Array.isArray(release.parts) || release.parts.length === 0 || release.parts.length > 100) throw invalid();
+  let total = 0;
+  release.parts.forEach((part, index) => {
+    const expectedFile = `cloudlane-${release.version}.${String(index + 1).padStart(2, '0')}.part`;
+    if (!part || part.file !== expectedFile || !Number.isSafeInteger(part.bytes) ||
+        part.bytes <= 0 || part.bytes > 20 * 1024 * 1024) throw invalid();
+    total += part.bytes;
+  });
+  if (total !== release.bytes) throw invalid();
+  return release;
+}
 async function getRelease() {
   if (!releasePromise) releasePromise = fetch('downloads/release.json', { cache: 'no-cache' }).then(response => {
     if (!response.ok) throw new Error('The installer is temporarily unavailable. Please try again.');
     return response.json();
-  }).catch(error => { releasePromise = null; throw error; });
+  }).then(validateRelease).catch(error => { releasePromise = null; throw error; });
   return releasePromise;
 }
 getRelease().then(release => {
@@ -77,12 +94,10 @@ async function downloadInstaller() {
   try {
     const release = await getRelease();
     if (signal.aborted) throw new DOMException('Cancelled', 'AbortError');
-    if (!Array.isArray(release.parts) || !release.parts.length || !Number.isSafeInteger(release.bytes) || release.bytes > 150 * 1024 * 1024) throw new Error('The installer manifest is invalid. Please try again later.');
     const segments = [];
     let received = 0;
     downloadTitle.textContent = 'A familiar place awaits.';
     for (const part of release.parts) {
-      if (!/^cloudlane-1\.7\.0\.\d+\.part$/.test(part.file)) throw new Error('The installer manifest is invalid.');
       const response = await fetch('downloads/' + part.file, { signal });
       if (!response.ok || !response.body) throw new Error('The download was interrupted. Please try again.');
       const reader = response.body.getReader(); let partReceived = 0;
@@ -105,12 +120,12 @@ async function downloadInstaller() {
     if (hash !== release.sha256) throw new Error('The installer didn’t pass its integrity check. Please try again.');
     if (signal.aborted) throw new DOMException('Cancelled', 'AbortError');
     const url = URL.createObjectURL(new Blob([data], { type: 'application/octet-stream' }));
-    const anchor = document.createElement('a'); anchor.href = url; anchor.download = 'Cloudlane-1.7.1-Setup.msi';
+    const anchor = document.createElement('a'); anchor.href = url; anchor.download = release.filename;
     document.body.append(anchor); anchor.click(); anchor.remove();
     setTimeout(() => URL.revokeObjectURL(url), 120000);
     downloadProgress.value = 100; downloadState.textContent = 'Installer verified · Ready';
     downloadTitle.textContent = 'Make yourself at home.';
-    downloadDescription.textContent = 'Your browser has received Cloudlane-1.7.1-Setup.msi. Open it from Downloads, finish setup, then sign in with Google.';
+    downloadDescription.textContent = `Your browser has received ${release.filename}. Open it from Downloads, finish setup, then sign in with Google.`;
     downloadDialog.classList.add('download-success'); downloadAction.textContent = 'Got it';
   } catch (error) {
     if (error.name !== 'AbortError') {
