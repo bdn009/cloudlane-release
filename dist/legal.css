@@ -33,3 +33,6 @@
 @media(max-width:900px){.legal-layout{grid-template-columns:180px minmax(0,1fr);gap:36px}}
 @media(max-width:700px){.legal-hero{padding-top:46px}.legal-hero h1{letter-spacing:-2px}.legal-layout{display:block;padding-bottom:48px}.legal-toc{position:static;margin-bottom:34px;padding-bottom:22px;border-bottom:1px solid var(--line)}.legal-toc ol{display:grid;grid-template-columns:1fr 1fr;gap:10px 20px}.legal-nav{height:auto;min-height:90px;flex-wrap:wrap;padding-block:20px;gap:20px}.legal-nav-links{gap:18px;font-size:12px}.legal-copy h2{font-size:23px}.legal-callout,.legal-contact{padding:20px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.legal-copy a.button-primary{color:#fff;text-decoration:none}
+.legal-meta a:hover,.footer .creator-link:hover{color:var(--violet);text-decoration:underline;text-underline-offset:3px}

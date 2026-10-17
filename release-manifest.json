@@ -50,20 +50,20 @@
       "sha256": "93ca679e512ca07464cbe84e727e99df6f9904b3ce438fdb2a726579e16cc0d4"
     },
     "index.html": {
-      "bytes": 18603,
-      "sha256": "27dfff41c5b9a6e0a96dead2163d950589ec6d3a90154aacfabd586e2e5a4f1e"
+      "bytes": 18740,
+      "sha256": "9ffea2876ed65941967ca4130b3992bf08ede3172cdec1c81cd6f910ccc05fb8"
     },
     "legal.css": {
-      "bytes": 3126,
-      "sha256": "94a12e6a31470539e289eb90b2fcbf1211b96d25230d6d337fa74febf7d08a36"
+      "bytes": 3348,
+      "sha256": "210304f04214e77cfdb0cb51c8d0b1e10df834eb12e4995338fae0dc69261cc3"
     },
     "privacy.html": {
       "bytes": 12160,
       "sha256": "dde2e5c218b25e42484617109bfaa1870a7bd2c503d2b125df3209a482623e02"
     },
     "setup.html": {
-      "bytes": 8200,
-      "sha256": "9c3ceeb15ed5788080995f0c734a7eebbf79aea5b03857c7db5b5421e5374bfa"
+      "bytes": 8768,
+      "sha256": "73f538b9f78aed38265901be7296bfc06030a66608c6ed277316ba31906dadc7"
     },
     "style.css": {
       "bytes": 30210,
