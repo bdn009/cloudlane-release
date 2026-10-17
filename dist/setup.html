@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f9f9f6">
+  <meta name="description" content="Download Cloudlane's open source and connect Google Drive using your own Desktop OAuth client. A step-by-step Google Cloud setup guide.">
+  <title>Source &amp; setup — Cloudlane</title>
+  <link rel="icon" href="assets/cloudlane.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="legal.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="nav-wrap"><nav class="nav container legal-nav" aria-label="Main navigation">
+    <a class="brand" href="index.html" aria-label="Cloudlane home"><img src="assets/cloudlane.svg" width="28" height="28" alt="">cloudlane<span class="brand-dot">.</span></a>
+    <div class="legal-nav-links"><a href="index.html">Home</a><a href="setup.html" aria-current="page">Source &amp; setup</a></div>
+  </nav></header>
+  <main id="main" class="container">
+    <header class="legal-hero"><div class="eyebrow"><span class="little-orbit" aria-hidden="true"></span>YOUR PROJECT. YOUR CONNECTION.</div>
+      <h1>Open source.<br>Set up your way.</h1><p>Cloudlane uses your own Google Desktop OAuth client. Set it up once, then sign in with Google and give your Drive a familiar letter in File Explorer.</p>
+      <div class="legal-meta"><span>MIT-licensed application</span><span>Windows 11 24H2+ · x64</span><span>By bdn236</span></div>
+    </header>
+    <div class="legal-layout">
+      <aside class="legal-toc" aria-label="On this page"><h2>On this page</h2><ol>
+        <li><a href="#source">Source download</a></li><li><a href="#project">1. Your Google project</a></li><li><a href="#api">2. Enable Drive API</a></li><li><a href="#audience">3. Configure sign-in</a></li><li><a href="#client">4. Download client JSON</a></li><li><a href="#connect">5. Import and connect</a></li><li><a href="#help">Troubleshooting</a></li>
+      </ol></aside>
+      <article class="legal-copy" aria-label="Cloudlane source and setup guide">
+        <section id="source"><h2>The complete app source</h2><p>Inspect, build or modify the code used for this release. The ZIP includes application code, checks, build instructions, vendored SMB libraries and their license notices. It contains no publisher Google credentials or saved accounts.</p><p><a class="button button-primary" href="downloads/source.zip" download="Cloudlane-Source.zip">Download source ZIP ↗</a></p><p><a href="downloads/source-info.json">Source version, size &amp; SHA-256</a></p><p>You can install the normal Windows app without building it yourself. Application code is MIT licensed; SMBLibrary and Utilities are LGPL-3.0-or-later. A Windows build needs .NET SDK 10 and Python 3.11+. Follow <code>README.md</code> and <code>Build.ps1</code> in the ZIP.</p></section>
+        <div class="legal-callout"><p><strong>Before your first sign-in:</strong> this release has no bundled publisher OAuth registration. Create a Desktop client in your own Google project and import its JSON locally. You do not send it to this website or to support.</p></div>
+        <section id="project"><h2>1. Create or select your project</h2><p>Open <a href="https://console.cloud.google.com/">Google Cloud Console</a>. Click the project selector at the top, then <strong>New project</strong>, or select your existing project. Keep that project selected for all the following steps.</p><p>Cloudlane does not need a VM, storage bucket or service account. A free-trial banner is separate from creating the Drive OAuth client.</p></section>
+        <section id="api"><h2>2. Enable Google Drive API</h2><p>Open the console menu → <strong>APIs &amp; Services → Library</strong>. Search for <strong>Google Drive API</strong>, open it and click <strong>Enable</strong>.</p></section>
+        <section id="audience"><h2>3. Configure Google sign-in</h2><p>Open <strong>Google Auth Platform → Overview</strong>. If it says the platform is not configured, click <strong>Get started</strong>. Enter your app name and support/contact email. Choose <strong>External</strong> for a personal Gmail account and complete the contact and policy steps.</p><p>Open <strong>Audience → Test users → Add users</strong>. Add the exact email you will use to sign in, including your own. Owning the project does not automatically make your email a test user.</p><p>Under <strong>Data Access</strong>, add <code>https://www.googleapis.com/auth/drive</code>. Cloudlane uses this permission to browse existing files, stream, upload, rename, create folders and move deleted items to Trash.</p><p>Google policies still apply. While your project is in Testing, Drive authorizations normally expire after seven days. Sign in again when needed. Sharing a client with other people may require additional Google configuration or verification.</p></section>
+        <section id="client"><h2>4. Download your Desktop client JSON</h2><ol><li>Open <strong>Google Auth Platform → Clients</strong>.</li><li>Click <strong>Create client</strong>.</li><li>Set <strong>Application type</strong> to <strong>Desktop app</strong>, enter a name and create it.</li><li>Download the JSON from the creation dialog or client details.</li></ol><p>The file contains both the client ID and client secret. You do not need to copy them separately. A Web application client, API key or service-account JSON will not work.</p></section>
+        <section id="connect"><h2>5. Import, sign in and connect</h2><ol><li>Open Cloudlane and click <strong>Google app setup</strong>.</li><li>Click <strong>Choose Desktop client JSON</strong> and select your downloaded file.</li><li>Click <strong>Done</strong>, then <strong>Sign in with Google</strong>. Use a test-user email and review the consent screen.</li><li>Choose an unused drive letter and click <strong>Connect drive</strong>. Approve Windows administrator access using the same Windows account.</li><li>Click <strong>Open in Explorer</strong>. Keep Cloudlane running while using the drive.</li></ol><p>The imported configuration and saved sign-in tokens use Windows user encryption. The original downloaded JSON remains in your download folder unless you remove it. <strong>Add Google account</strong> connects additional accounts through the same client; each account authorizes access separately.</p><p>Enable each account’s <strong>Auto-connect</strong> checkbox and <strong>Start with Windows</strong> if you want to reconnect at startup. Windows approval may still appear.</p></section>
+        <section id="help"><h2>If something blocks setup</h2><p><strong>Access blocked:</strong> check the selected project and <strong>Audience → Test users</strong>. Add the exact email shown in Google’s error, then start sign-in again from Cloudlane. Your organization may restrict access.</p><p><strong>Replacing a client:</strong> disconnect and forget all saved accounts first. Import the replacement and sign in again; existing tokens belong to the old client.</p><p><strong>Windows compatibility:</strong> the driverless Explorer connection requires Windows 11 24H2 or newer, build 26100+, on x64. Windows 10 and earlier Windows 11 releases are not supported by this release.</p><p>For privacy and local data removal, see the <a href="privacy.html">Privacy Policy</a>. Official details: <a href="https://developers.google.com/identity/protocols/oauth2/native-app">Google Desktop OAuth documentation</a>.</p><div class="legal-contact"><p>Support: <a href="mailto:support@hisabi.store">support@hisabi.store</a>. Include your app version and relevant diagnostics. Never send client JSON, passwords or account tokens.</p></div></section>
+      </article>
+    </div>
+  </main>
+  <footer class="container footer"><a class="brand" href="index.html">cloudlane<span class="brand-dot">.</span></a><p>Your cloud. Right at home.</p><nav class="legal-footer-links" aria-label="Footer"><a href="setup.html" aria-current="page">Source &amp; setup</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav></footer>
+</body>
+</html>

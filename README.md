@@ -1,15 +1,23 @@
 # Cloudlane release
 
-Production website repository. `dist/` contains the deployable landing page and verified Cloudlane 1.7.1 production installer segments, built with the separate `cloudlane-production` Google Desktop registration. The browser combines the segments into one normal MSI download. There is no framework build or dependency installation.
+Production website and Cloudlane 1.7.2 distribution. The Windows app uses each user's own Google Desktop OAuth JSON; no publisher registration is bundled. The website includes the complete MIT-licensed app source as an audited download, setup instructions, privacy and terms.
 
 ## Netlify
 
-Import this repository from GitHub. Use branch `main`, leave base directory and build command empty, and set publish directory to `dist`. The included `netlify.toml` already declares that directory. Connect only this release repository to Netlify.
+Connect this private repository's main branch, leave base directory and build command empty, and publish dist. netlify.toml already declares it. The website and files in dist are public, including the intended source ZIP; repository privacy does not make deployed downloads private.
 
-## Update
+## Contents
 
-Make changes in the separate `cloudlane development` repository. Build a production installer with `python build-production.py`, then run `python publish-release.py`, review the release diff, and commit/push this repository. Do not rebuild an already published version; bump `production.json` first. The publish script requires the verified production installer, validates site/download behavior and verifies every copied file against `release-manifest.json`. The development test installer is not copied into production. Neither script pushes or deploys automatically.
+- dist/: static website and assets.
+- dist/downloads/release.json and .part files: exact installer size/hash and segments; the browser verifies and saves one normal MSI.
+- dist/downloads/source.zip and source-info.json: complete matching source, version, size and SHA-256.
+- dist/setup.html: own Google project/client setup and source/build instructions.
+- release-manifest.json: SHA-256 inventory of every deployed file.
 
-Only production files, hosting configuration, this guide and a checksum manifest belong here. Do not copy app source, developer tools, account data or publisher JSON into this repository. The installed binary and third-party license/source notices are intentionally included in the downloadable installer.
+Only curated production files belong here. Do not copy account data, SDKs, loose development source or publisher credentials into this repo. Required third-party source/notices are intentionally included in the installer and complete source ZIP. Historical private commits may include older installers with publisher Desktop registrations; do not make history public without an audit.
 
-Google public access/verification has not been established by this build. The website's Testing explanation remains applicable until the production Google project's launch configuration is completed. Native production installation/uninstallation and live Google sign-in require user-session validation. After obtaining the actual site URL, set `website_url` in the development repository's `production.json` and publish a new snapshot. GitHub and Netlify setup are separate from this local build.
+## Updates and validation
+
+Work in ../cloudlane development. Bump production.json, run python build-production.py, then python publish-release.py. Review and commit/push this release snapshot. Neither script pushes or deploys automatically.
+
+1.7.2 passed 358 app checks, 22 installer checks, native registry OS detection including eight compatibility scenarios, full installer download integrity and downloader failure/retry/cancel checks. The complete source ZIP rebuilt from a clean extraction without warnings/errors. Native install/uninstall and live Google authorization still need normal-user verification; DPAPI and device-namespace probes were explicitly skipped in the restricted build profile. Windows 11 24H2+ x64 remains required; this build is unsigned.
