@@ -1,0 +1,3 @@
+# Deploy the exact bytes checked by release-manifest.json on every platform.
+dist/** -text
+release-manifest.json -text
