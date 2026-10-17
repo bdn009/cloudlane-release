@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f9f9f6">
+  <meta name="description" content="Bring Google Drive into File Explorer. Browse your files, stream videos and copy straight to the cloud with Cloudlane for Windows.">
+  <meta property="og:title" content="Cloudlane — Your cloud. Right at home.">
+  <meta property="og:description" content="Google Drive, with a familiar address. Meet Cloudlane for Windows.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cloudlane-drive.nexoraitworkspace.chatgpt.site">
+  <title>Cloudlane — Your cloud. Right at home.</title>
+  <link rel="icon" href="assets/cloudlane.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="mark" viewBox="0 0 32 32"><path d="m16 3 13 13-13 13L3 16Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="m16 10 6 6-6 6-6-6Z" fill="currentColor"/></symbol>
+    <symbol id="windows" viewBox="0 0 24 24"><path d="M2 3h9v8H2zm11 0h9v8h-9zM2 13h9v8H2zm11 0h9v8h-9z" fill="currentColor"/></symbol>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="drive" viewBox="0 0 48 48"><path fill="#2c8dff" d="m30 5 18 31H36L18 5Z"/><path fill="#f7c341" d="M18 5h12L12 36H0Z"/><path fill="#39b87d" d="m0 36 6 10h36l6-10Z"/></symbol>
+    <symbol id="folder" viewBox="0 0 40 32"><path d="M2 5a3 3 0 0 1 3-3h10l4 4h16a3 3 0 0 1 3 3v18a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3Z" fill="#eab54e"/><path d="M2 10h36v17a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3Z" fill="#ffd273"/></symbol>
+    <symbol id="check" viewBox="0 0 20 20"><path d="m4 10 4 4 8-8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="play" viewBox="0 0 24 24"><path d="m9 5 11 7-11 7Z" fill="currentColor"/></symbol>
+  </defs></svg>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="nav-wrap">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#" aria-label="Cloudlane home"><svg><use href="#mark"/></svg>cloudlane<span class="brand-dot">.</span></a>
+      <div class="nav-links" id="nav-links"><a href="#features">Why Cloudlane</a><a href="#how-it-works">How it works</a><a href="#faq">FAQ</a></div>
+      <button class="button nav-download" data-download><span>Get Cloudlane</span><svg><use href="#arrow"/></svg></button>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation"><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero container">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="little-orbit"></span>A little closer to your Google Drive</div>
+        <h1>Your cloud.<br>Right at <span class="home-word">home<svg viewBox="0 0 290 16" aria-hidden="true"><path d="M3 11C72 1 209 2 286 9" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg></span>.</h1>
+        <p class="hero-description">Bring Google Drive into File Explorer. Open your files, stream your videos and copy to the cloud. All from a place you already know.</p>
+        <div class="hero-actions"><button class="button button-primary" data-download><svg class="windows-icon"><use href="#windows"/></svg><span>Download for Windows</span><svg><use href="#arrow"/></svg></button><a class="text-link" href="#how-it-works">See how it works <span>↘</span></a></div>
+        <p class="download-meta">Windows 11 24H2+ · x64 · <span data-version>v1.7.0</span> · <span data-size>70 MB</span></p>
+        <div class="hero-assurances"><span><svg><use href="#check"/></svg>Free to use</span><span><svg><use href="#check"/></svg>No extra driver</span></div>
+      </div>
+      <div class="hero-art" aria-label="Interactive illustration of Google Drive in Windows Explorer">
+        <div class="art-grid"></div><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <span class="art-spark spark-one">✦</span><span class="art-spark spark-two">+</span>
+        <div class="connection-label"><span></span>Cloud storage. Local feeling.</div>
+        <div class="explorer-window">
+          <div class="explorer-title"><span class="explorer-tab"><svg><use href="#drive"/></svg>Google Drive <span>×</span></span><span class="window-actions" aria-hidden="true">−　□　×</span></div>
+          <div class="explorer-toolbar"><span aria-hidden="true">←　→　↑</span><span class="breadcrumb">This PC <b>›</b> Google Drive (G:)</span><svg class="search-icon" viewBox="0 0 20 20" aria-hidden="true"><circle cx="8" cy="8" r="5" fill="none" stroke="currentColor"/><path d="m12 12 5 5" stroke="currentColor"/></svg></div>
+          <div class="explorer-body">
+            <div class="explorer-sidebar"><span>⌂ <b>Home</b></span><span>▧ <b>Pictures</b></span><span>▷ <b>Videos</b></span><span>▱ <b>Documents</b></span><span class="sidebar-divider"></span><span class="selected"><svg><use href="#drive"/></svg><b>Google Drive</b></span></div>
+            <div class="explorer-content"><div class="drive-heading"><svg><use href="#drive"/></svg><div><strong>Your Google Drive</strong><small>Your files, a familiar address.</small></div></div>
+              <div class="demo-tabs" role="tablist" aria-label="Preview folder"><button role="tab" aria-selected="true" aria-controls="folder-preview" id="tab-everyday" data-folder="everyday">Everyday</button><button role="tab" aria-selected="false" aria-controls="folder-preview" id="tab-creative" data-folder="creative" tabindex="-1">Creative</button></div>
+              <div class="folder-grid" id="folder-preview" role="tabpanel" aria-labelledby="tab-everyday">
+                <div class="demo-folder"><svg><use href="#folder"/></svg><span>Photos</span></div><div class="demo-folder"><svg><use href="#folder"/></svg><span>Videos</span></div><div class="demo-folder"><svg><use href="#folder"/></svg><span>Documents</span></div>
+                <div class="preview-file"><div class="mini-photo photo-one"><span class="sun"></span><span class="mountain"></span></div><span>Weekend away.jpg</span></div><div class="preview-file"><div class="mini-photo photo-two"><span class="sun"></span><span class="mountain"></span><i>▶</i></div><span>A moment outside.mp4</span></div><div class="preview-file"><div class="document-thumb"><span></span><span></span><span></span><span></span><i>PDF</i></div><span>Good ideas.pdf</span></div>
+              </div>
+              <div class="explorer-status"><span>6 items</span><span>Connected <i></i></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="floating-drive"><div class="disk-icon"><svg><use href="#drive"/></svg><span></span></div><div><small>A NEW ADDRESS FOR YOUR CLOUD</small><strong>Meet your G: drive<span>↗</span></strong></div></div>
+        <span class="art-caption">Illustrative preview · Try the folder tabs</span>
+      </div>
+    </section>
+
+    <div class="quick-benefits container"><div><span class="benefit-icon">↗</span><p><strong>Familiar by design.</strong><br>Your everyday Windows apps.</p></div><div><span class="benefit-icon">▷</span><p><strong>Made for the moment.</strong><br>Stream without a full Drive sync.</p></div><div><span class="benefit-icon">⊞</span><p><strong>Room for every account.</strong><br>A drive letter for each Google Drive.</p></div></div>
+
+    <section class="features container section-space" id="features">
+      <div class="section-heading"><div><span class="section-kicker">LESS FRICTION. MORE FAMILIAR.</span><h2>Your files.<br>Your favorite way to work.</h2></div><p>The cloud shouldn’t feel like somewhere else.<br>Keep the files you love in your usual flow.</p></div>
+      <div class="feature-grid">
+        <article class="feature feature-stream">
+          <div class="feature-number">01 / OPEN & STREAM</div><h3>Press play.<br>Stay in the moment.</h3><p>Open cloud photos and videos in your Windows apps. An optional 2 GB rolling cache helps keep playback moving.</p>
+          <div class="video-scene" aria-label="Illustration of a video playing from Google Drive"><div class="landscape"><div class="landscape-sun"></div><div class="ridge back-ridge"></div><div class="ridge front-ridge"></div></div><span class="scene-label">THE LONG WAY HOME</span><div class="video-controls"><svg><use href="#play"/></svg><span>02:14</span><div class="video-progress"><i></i><b></b></div><span>08:30</span><span>⛶</span></div></div>
+          <span class="feature-footnote">Illustration · Playback depends on your connection and player.</span>
+        </article>
+        <article class="feature feature-accounts"><div class="feature-number">02 / MULTIPLE ACCOUNTS</div><h3>A place for<br>every part of your day.</h3><p>Personal projects. Work files. Keep multiple Google accounts connected, each with its own drive letter and name.</p><div class="account-stack"><div><span class="account-letter">G:</span><svg><use href="#drive"/></svg><span><strong>Personal Drive</strong><small>For the everyday things.</small></span><i></i></div><div><span class="account-letter">H:</span><svg><use href="#drive"/></svg><span><strong>Studio Drive</strong><small>For the next big idea.</small></span><i></i></div></div></article>
+        <article class="feature feature-copy"><div class="copy-graphic" aria-hidden="true"><div class="copy-file">↟<small>FROM YOUR PC</small></div><span class="copy-arrow">→</span><div class="copy-cloud"><svg><use href="#mark"/></svg><small>TO GOOGLE DRIVE</small></div></div><div><div class="feature-number">03 / COPY & GO</div><h3>Drag. Drop. Done.</h3><p>Copy files and folders into your mapped drive from Explorer. Uploads go straight to Google Drive, without an extra local staging copy.</p></div></article>
+      </div>
+    </section>
+
+    <section class="app-section section-space"><div class="container app-layout"><div class="app-copy"><span class="section-kicker">A LITTLE WINDOW. A LOT OF POSSIBILITY.</span><h2>Set it up.<br>Make yourself <br>at home.</h2><p>Give each drive a name. Choose which accounts reconnect. Keep Cloudlane quietly running in your system tray.</p><ul><li><svg><use href="#check"/></svg>Your own drive names and letters</li><li><svg><use href="#check"/></svg>Auto-connect for the accounts you choose</li><li><svg><use href="#check"/></svg>Windows startup and system tray controls</li></ul><a class="text-link" href="#how-it-works">A simple start <span>↗</span></a></div><div class="app-screenshot"><div class="screenshot-top"><svg><use href="#mark"/></svg><span>Cloudlane for Windows</span><span class="screenshot-dots">● ● ●</span></div><img src="assets/cloudlane-app.png" width="1164" height="921" alt="Cloudlane 1.7.0 showing Sign in with Google, drive controls, streaming cache and startup settings" loading="lazy"><span class="screenshot-caption">The actual Cloudlane app · Version 1.7.0</span></div></div></section>
+
+    <section class="how-section container section-space" id="how-it-works"><div class="section-heading"><div><span class="section-kicker">FROM HERE TO THERE, IN THREE STEPS.</span><h2>A familiar place.<br>A surprisingly simple start.</h2></div></div><div class="steps"><article><span class="step-number">01</span><div class="step-line"></div><h3>Install Cloudlane</h3><p>Download the Windows installer and follow the setup. No extra driver or separate runtime to install.</p></article><article><span class="step-number">02</span><div class="step-line"></div><h3>Sign in with Google</h3><p>Choose your own Google account in your browser. There’s no Google Cloud setup or JSON import on your PC.</p></article><article><span class="step-number">03</span><div class="step-line"></div><h3>Pick a drive letter</h3><p>Choose an available letter and connect. Approve Windows’ administrator prompt, then open File Explorer.</p></article></div><div class="early-access-note"><span>✦</span><p><strong>A note on early access.</strong> Google may require the publisher to approve your email before you can sign in. See the FAQ below.</p><a href="#faq">Good to know <span>↗</span></a></div></section>
+
+    <section class="faq-section container section-space" id="faq"><div class="faq-heading"><span class="section-kicker">THE GOOD-TO-KNOWS</span><h2>A few things <br>you might be <br>wondering.</h2><div class="little-cloud" aria-hidden="true">☁</div></div><div class="faq-list">
+      <details open><summary>What do I need to run Cloudlane?<span>+</span></summary><p>A Windows 11 PC running 24H2 or newer (build 26100+), with an x64 processor and internet access. Connecting a drive needs administrator approval using the same Windows account. The drive appears under Network locations in File Explorer.</p></details>
+      <details><summary>Is Cloudlane free?<span>+</span></summary><p>Yes. There’s no Cloudlane subscription or paid filesystem driver. Your normal Google account storage limits and Google API quotas still apply.</p></details>
+      <details><summary>Does it download my whole Google Drive?<span>+</span></summary><p>No full Drive sync is required. Browsing lists your files, while opening files requests their content. Video and image streaming can use an optional shared 2 GB rolling cache. Windows and other apps may also request thumbnails or file previews.</p></details>
+      <details><summary>Can I use more than one Google account?<span>+</span></summary><p>Yes. Add multiple accounts, give each its own available drive letter and name, and keep them connected together. You can choose auto-connect separately for each account.</p></details>
+      <details><summary>Why might Google say “Access blocked”?<span>+</span></summary><p>While the publisher’s Google OAuth project is in Testing, your exact Google email needs to be added as a test user by the publisher. Testing authorizations for Drive also expire after seven days, so you may need to sign in again. Your organization may have its own access restrictions.</p></details>
+      <details><summary>Does Cloudlane need to stay open?<span>+</span></summary><p>It needs to keep running while your drives are connected. Close the window to keep it running in the system tray. Enable Start with Windows and your accounts’ auto-connect options if you want them to reconnect at startup. Windows approval may still appear.</p></details>
+      <details><summary>Where do my files and sign-in details go?<span>+</span></summary><p>Cloudlane talks to Google Drive directly from your PC. Each user signs into their own account, and saved tokens use Windows account encryption. Cached media stays in the local folder you choose. This landing page doesn’t ask for your Google password or connect to your Drive.</p></details>
+    </div></section>
+
+    <section class="final-section container"><div class="final-cta"><div class="cta-orbit" aria-hidden="true"></div><div class="final-copy"><span class="section-kicker">YOUR CLOUD. YOUR EVERYDAY.</span><h2>Give your cloud<br>a familiar address.</h2><button class="button button-white" data-download><svg class="windows-icon"><use href="#windows"/></svg><span>Download Cloudlane</span><svg><use href="#arrow"/></svg></button><p>Free for Windows · <span data-version>v1.7.0</span> · <span data-size>70 MB</span></p></div><div class="address-art" aria-hidden="true"><svg><use href="#mark"/></svg><span>G:\</span><small>Right at home.</small></div></div></section>
+  </main>
+  <footer class="container footer"><a class="brand" href="#"><svg><use href="#mark"/></svg>cloudlane<span class="brand-dot">.</span></a><p>Made for Windows. Built around your files.</p><div><button data-dialog="privacy">Privacy</button><button data-dialog="release">Release notes</button><span>© 2026 Cloudlane</span></div></footer>
+
+  <dialog id="download-dialog" class="modal"><button class="modal-x" data-close aria-label="Close download dialog">×</button><span class="modal-icon"><svg><use href="#windows"/></svg></span><span class="section-kicker">CLOUDLANE FOR WINDOWS</span><h2 id="download-title">Getting things ready.</h2><p id="download-description">Preparing your Windows installer. Your download will start when it’s ready.</p><progress id="download-progress" max="100" value="0" aria-label="Installer download progress"></progress><div class="download-detail"><span id="download-state" role="status" aria-live="polite">Connecting…</span><span data-version>v1.7.0</span></div><p class="download-requirement">Windows 11 24H2+ · x64<br>Unsigned early-access build. Windows may show a publisher warning.</p><button class="button button-primary modal-action" id="download-cancel">Cancel download</button><noscript>Enable JavaScript to download the Windows installer.</noscript></dialog>
+  <dialog id="privacy-dialog" class="modal info-modal"><button class="modal-x" data-close aria-label="Close privacy information">×</button><span class="section-kicker">PRIVACY, SIMPLY PUT.</span><h2>Your account.<br>Your files.</h2><p>This page uses no analytics, advertising trackers or email collection. The download comes from this website; this page does not request access to Google Drive.</p><p>The Windows app opens Google’s sign-in page in your browser. It saves account tokens encrypted for your Windows user and accesses Google Drive from your PC. Optional cached media is stored locally. You can remove app access in your Google Account settings.</p><p>The hosting provider may process standard connection logs and sign-in information used to control access to this website. This page also loads its typeface from Google Fonts, which receives standard connection information when the font is requested.</p><button class="button button-primary" data-close>Got it <svg><use href="#check"/></svg></button></dialog>
+  <dialog id="release-dialog" class="modal info-modal"><button class="modal-x" data-close aria-label="Close release notes">×</button><span class="section-kicker">WHAT’S NEW</span><h2>Cloudlane 1.7.0</h2><p>One Windows installer. A simpler start.</p><ul><li>Direct Google sign-in on a fresh install, with no JSON import.</li><li>Start menu and desktop shortcuts, with Windows uninstall support.</li><li>Multiple Google accounts with separate drive names, letters and auto-connect choices.</li><li>Optional 2 GB streaming cache, direct uploads and system tray controls.</li></ul><p class="release-note">356 application checks and 19 installer checks passed. Full native installation/uninstallation and live Google sign-in still need verification outside the restricted build environment.</p><button class="button button-primary" data-close>Back to Cloudlane <svg><use href="#arrow"/></svg></button></dialog>
+</body>
+</html>

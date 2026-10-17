@@ -1,0 +1,50 @@
+{
+  "app_version": "1.7.0",
+  "installer_sha256": "95769f6aa236ec336c20d188ec68bde7b1a075cc73382fb39cead19ca9ee90b1",
+  "files": {
+    ".gitkeep": {
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    "app.js": {
+      "bytes": 8158,
+      "sha256": "7a3bc1860291762e80c8aedeb7b0aadedec20520b7fdd2dee004aa5712c1d9f2"
+    },
+    "assets/cloudlane-app.png": {
+      "bytes": 117211,
+      "sha256": "9bd0851f5660466449fbecf85cba21d1ae41c7b7c659f6662ae01ddd6affd363"
+    },
+    "assets/cloudlane.svg": {
+      "bytes": 244,
+      "sha256": "a9bece787c2366ac59926fda7ac59a861199c29d6889ce17cd39b6b4d697279b"
+    },
+    "downloads/cloudlane-1.7.0.01.part": {
+      "bytes": 20971520,
+      "sha256": "a3500f0cc665a4162782422a0332d4acfa41b00f1fe466ff41d2ff47b3e9cb40"
+    },
+    "downloads/cloudlane-1.7.0.02.part": {
+      "bytes": 20971520,
+      "sha256": "23089581f1dd7ae47a0f98612b66680501387f7145e6fa7a8d59bda405124216"
+    },
+    "downloads/cloudlane-1.7.0.03.part": {
+      "bytes": 20971520,
+      "sha256": "70e87ae08a8603ad1dcdc25ecd53a42d160b6d8a791a261ce3c91054a89b7180"
+    },
+    "downloads/cloudlane-1.7.0.04.part": {
+      "bytes": 10530816,
+      "sha256": "01b382115fbb5e630303657b5d1e1bc8fab84c7851d92d6468c27bebf2782558"
+    },
+    "downloads/release.json": {
+      "bytes": 520,
+      "sha256": "18dac2e81aadcf281420f7c88042acbda0321bce104b045db4732734d5343d7f"
+    },
+    "index.html": {
+      "bytes": 19120,
+      "sha256": "cd7456ca1ace0209badd350d4d5ea87aa4088b331ca24a68fb49ea55dbdbfa04"
+    },
+    "style.css": {
+      "bytes": 30070,
+      "sha256": "4f5073d954276ebc507b773a356f2e9f15c4f7d46b5501eb90660b338e6eca19"
+    }
+  }
+}

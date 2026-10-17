@@ -1,0 +1,24 @@
+{
+  "version": "1.7.0",
+  "filename": "Cloudlane-1.7.0-Setup.msi",
+  "bytes": 73445376,
+  "sha256": "95769f6aa236ec336c20d188ec68bde7b1a075cc73382fb39cead19ca9ee90b1",
+  "parts": [
+    {
+      "file": "cloudlane-1.7.0.01.part",
+      "bytes": 20971520
+    },
+    {
+      "file": "cloudlane-1.7.0.02.part",
+      "bytes": 20971520
+    },
+    {
+      "file": "cloudlane-1.7.0.03.part",
+      "bytes": 20971520
+    },
+    {
+      "file": "cloudlane-1.7.0.04.part",
+      "bytes": 10530816
+    }
+  ]
+}
